@@ -8,11 +8,11 @@
     <name>Tic Tac Toe</name>
 
     <description>
-        A tic tac toe game
+        A tic tac toe game for a class
     </description>
 
-    <author href="https://github.com/ProfessorKevinForbes/TicTacToe4" email="professorkevinforbes@gmail.com">
-        Kevin Forbes
+    <author href="https://github.com/rpglenn2/TicTacToe" email="rpglenn2@gmail.com">
+        Ryan Glenn
     </author>
 
 	<icon src="icon.png" />
