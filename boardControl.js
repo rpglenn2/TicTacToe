@@ -69,7 +69,7 @@ function toggleBox(name) {
 	}
 	checkWin();
 	
-	if(counter == 9) {
+	if(counter >= 8) {
 			navigator.vibrate(3000);
 			alert('Game Over!  It\'s a tie.');
 		}
