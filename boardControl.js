@@ -56,17 +56,17 @@ function checkWin() {
 function toggleBox(name) {
 	var box = document.getElementById(name);
 	if(endsWith(box.src, "blank.png")) {
-		var substr = name.substring(3) - 1;
+		var substr = name.substring(3);
 		if(turn == 0) {
 			box.src = "x.png";
 			turn = 1;
 			counter++;
-			array[substr.ValueOf()] = 1;
+			array[substr.ValueOf() - 1] = 1;
 		} else { 
 			box.src = "o.png";
 			turn = 0;
 			counter++;
-			array[substr.valueOf()] = 2;
+			array[substr.valueOf() - 1] = 2;
 		}
 		checkWin();
 		
