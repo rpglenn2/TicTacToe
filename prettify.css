@@ -84,12 +84,19 @@ h1 {
 	font-family:cursive;
 }
 
-img {
+img.move {
 	display:block;
 	float:clear;
 	position:relative;
 	left:5px;
 	top:10px;
+}
+img.avatar {
+	display:inline-block;
+	position:relative;
+	height:24px;
+	width:24px;
+	top:5px;
 }
 
 #board {
@@ -97,7 +104,7 @@ img {
 	float:clear;
 	position:relative;
 	left:5px;
-	top:10px;
+	top: -10px;
 }
 
 
