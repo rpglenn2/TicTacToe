@@ -2,21 +2,25 @@
 <html>
 	<head>
 		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" type="text/css" href="prettify.css">
+		<script type="text/javascript" src="boardControl.js"></script>
 	</head>
 
 	<body>
 		<div>
 		<center>
-		<h1> Tic Toe Toe</h1>
+		<h1> Tic Tac Toe</h1>
 		</center>
 		</div>	
 
 		<div>
 		<h2>Controls</h2>
 		<ul>
-			<li>New Game</li>
+			<li><a href="" onclick="clearGame()">New Game</a></li>
 			<li>Scoreboard</li>
 		</ul>
+		</div>
+		<br clear="all"/>
 		</div>
 
 		<div>
@@ -31,7 +35,16 @@
 
 		<div>
 		<center>
-			<img src="board.png" />
+			<img id="board" src="board.png" />
+			<img id="box1" src="blank.png" onclick="toggleBox('box1')" />
+			<img id="box2" src="blank.png" onclick="toggleBox('box2')" />
+			<img id="box3" src="blank.png" onclick="toggleBox('box3')" />
+			<img id="box4" src="blank.png" onclick="toggleBox('box4')" />
+			<img id="box5" src="blank.png" onclick="toggleBox('box5')" />
+			<img id="box6" src="blank.png" onclick="toggleBox('box6')" />
+			<img id="box7" src="blank.png" onclick="toggleBox('box7')" />
+			<img id="box8" src="blank.png" onclick="toggleBox('box8')" />
+			<img id="box9" src="blank.png" onclick="toggleBox('box9')" />
 		</center>
 		</div>
 
