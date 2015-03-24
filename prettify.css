@@ -94,7 +94,7 @@ img {
 
 #board {
 	display:block;
-	float:none;
+	float:clear;
 	position:relative;
 	left:5px;
 	top:10px;
