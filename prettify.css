@@ -7,14 +7,14 @@
 	background-color:#CC9933;
 	padding:0px 20px 0px 20px;
 	height:100px;
-	width:320px;
+	width:1080px;
 	font-family:cursive;
 	position:relative;
 	
 }
 
 h1 {
-	color:blue;
+	color:#660000;
 	background-color:#CC9933;
 	font-family:cursive;
 	width:320px;
@@ -25,11 +25,11 @@ h1 {
 #div1 {
 	float:left;
 	display:block;
-	color:blue;
+	color:#660000;
 	background-color:#CC9933;
 	padding:0px 20px 0px 20px;
 	height:150px;
-	width:320px;
+	width:1080px;
 	font-family:cursive;
 	position:relative;
 	top:-30px;
@@ -43,19 +43,26 @@ h1 {
 
 }
 
+#h2one {
+
+	position:relative;
+	left:120px;
+
+}
+
 
 #div2 {
+	float: left;
 	height:400px;
 	display:block;
-	color:blue;
+	color:#660000;
 	background-color:#CC9933;
 	padding:0px 20px 0px 20px;
 	margin:auto;
 	font-family:cursive;
 	position:relative;
-	top:-60px;
-	width:320px;
-	left:-167px;
+	top: -30px;
+	width:1080px;
 
 }
 
@@ -78,6 +85,14 @@ h1 {
 }
 
 img {
+	display:block;
+	float:clear;
+	position:relative;
+	left:5px;
+	top:10px;
+}
+
+#board {
 	display:block;
 	float:clear;
 	position:relative;
