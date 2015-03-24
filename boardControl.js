@@ -55,24 +55,28 @@ function checkWin() {
 function toggleBox(name) {
 	var box = document.getElementById(name);
 	if(endsWith(box.src, "blank.png")) {
+		var substr = name.substring(3)) - 1;
 		if(turn == 0) {
 			box.src = "x.png";
 			turn = 1;
 			counter++;
-			array[str.valueOf(str.substring(name, 3)) - 1] = 1;
+			array[substr.ValueOf()] = 1;
 		} else { 
 			box.src = "o.png";
 			turn = 0;
 			counter++;
-			array[str.valueOf(str.substring(name, 3)) - 1] = 2;
+			array[substr.valueOf()] = 2;
 		}
-	}
-	checkWin();
-	
-	if(counter >= 8) {
+		checkWin();
+		
+		if(counter >= 9) {
 			navigator.vibrate(3000);
 			alert('Game Over!  It\'s a tie.');
 		}
+	}
+
+	
+	
 }
 
 function clearGame() {
