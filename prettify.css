@@ -4,7 +4,7 @@
 	float:left;
 	display:block;
 	color:blue;
-	background-color:grey;
+	background-color:#CC9933;
 	padding:0px 20px 0px 20px;
 	height:100px;
 	width:320px;
@@ -15,7 +15,7 @@
 
 h1 {
 	color:blue;
-	background-color:grey;
+	background-color:#CC9933;
 	font-family:cursive;
 	width:320px;
 		
@@ -26,7 +26,7 @@ h1 {
 	float:left;
 	display:block;
 	color:blue;
-	background-color:grey;
+	background-color:#CC9933;
 	padding:0px 20px 0px 20px;
 	height:150px;
 	width:320px;
@@ -48,7 +48,7 @@ h1 {
 	height:400px;
 	display:block;
 	color:blue;
-	background-color:grey;
+	background-color:#CC9933;
 	padding:0px 20px 0px 20px;
 	margin:auto;
 	font-family:cursive;
@@ -61,7 +61,7 @@ h1 {
 
 #label1 {
 	display:inline-block;
-	background-color:grey;
+	background-color:#CC9933;
 	color:red;
 	position:relative;
 	left:50px;
@@ -70,7 +70,7 @@ h1 {
 
 #label2 {
 	display:inline-block;
-	background-color:grey;
+	background-color:#CC9933;
 	color:green;
 	position:relative;
 	left:110px;
@@ -188,6 +188,7 @@ img {
 	width:50px;
 
 }
+
 
 
 
