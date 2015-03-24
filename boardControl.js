@@ -17,12 +17,9 @@ function endsWith(str, suffix) {
 
 function checkWin() {
 	var win = 0;
-	var array[9];
+	var array = [10,11,12,13,14,15,16,17,18];
 	for(var i=0; i < 9; i++) {
 		var box = document.getElementById("box" + (i+1));
-		if(endsWith(box.src, "blank.png")) {
-			array[i] = i+20;
-		}
 		if(endsWith(box.src, "x.png")) {
 			array[i] = 1;
 		}
