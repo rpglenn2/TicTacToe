@@ -1,4 +1,6 @@
 var turn = 0;
+var counter = 0;
+var array = [10,11,12,13,14,15,16,17,18];
 
 var imageName="";
 
@@ -17,8 +19,7 @@ function endsWith(str, suffix) {
 
 function checkWin() {
 	var win = 0;
-	var array = [10,11,12,13,14,15,16,17,18];
-	for(var i=0; i < 9; i++) {
+	/*for(var i=0; i < 9; i++) {
 		var box = document.getElementById("box" + (i+1));
 		if(endsWith(box.src, "x.png")) {
 			array[i] = 1;
@@ -26,7 +27,7 @@ function checkWin() {
 		if(endsWith(box.src, "o.png")) {
 			array[i] = 2;
 		}
-	}
+	}*/
 	if(array[0] == array[1] == array [2])
 		win = array[0];
 	if(array[3] == array[4] == array [5])
@@ -45,8 +46,8 @@ function checkWin() {
 		win = array[6];		
 	
 	if(win == 1 || win == 2) {
-		navigator.vibrate(3000);
-		alert('Game Over!');
+		alert('Player' + win + ' wins!');
+		//update scoreboard
 	}
 		
 }
@@ -57,16 +58,27 @@ function toggleBox(name) {
 		if(turn == 0) {
 			box.src = "x.png";
 			turn = 1;
+			counter++;
+			array[str.valueOf(str.substring(name, 3)) - 1] = 1;
 		} else { 
 			box.src = "o.png";
 			turn = 0;
+			counter++;
+			array[str.valueOf(str.substring(name, 3)) - 1] = 2;
 		}
 	}
 	checkWin();
+	
+	if(counter == 9) {
+			navigator.vibrate(3000);
+			alert('Game Over!  It\'s a tie.');
+		}
 }
 
 function clearGame() {
 	turn = 0;
+	array = [10,11,12,13,14,15,16,17,18];
+	counter = 0;
 	for(var i=1; i < 10; i++) {
 		var box = document.getElementById("box" + i);
 		box.src = "blank.png";
