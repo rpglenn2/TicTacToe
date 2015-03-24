@@ -47,7 +47,7 @@ function checkWin() {
 		win = array[6];		
 	
 	if(win == 1 || win == 2) {
-		alert('Player' + win + ' wins!');
+		alert('Player ' + win + ' wins!');
 		//update scoreboard
 	}
 		
@@ -61,7 +61,7 @@ function toggleBox(name) {
 			box.src = "x.png";
 			turn = 1;
 			counter++;
-			array[substr.ValueOf() - 1] = 1;
+			array[substr.valueOf() - 1] = 1;
 		} else { 
 			box.src = "o.png";
 			turn = 0;
