@@ -1,5 +1,6 @@
 var turn = 0;
 var counter = 0;
+var win = 0;
 var array = [10,11,12,13,14,15,16,17,18];
 
 var imageName="";
@@ -18,7 +19,7 @@ function endsWith(str, suffix) {
 }
 
 function checkWin() {
-	var win = 0;
+	win = 0;
 	/*for(var i=0; i < 9; i++) {
 		var box = document.getElementById("box" + (i+1));
 		if(endsWith(box.src, "x.png")) {
@@ -55,7 +56,7 @@ function checkWin() {
 function toggleBox(name) {
 	var box = document.getElementById(name);
 	if(endsWith(box.src, "blank.png")) {
-		var substr = name.substring(3)) - 1;
+		var substr = name.substring(3) - 1;
 		if(turn == 0) {
 			box.src = "x.png";
 			turn = 1;
@@ -69,24 +70,23 @@ function toggleBox(name) {
 		}
 		checkWin();
 		
-		if(counter >= 9) {
+		if(counter >= 9 && win == 0) {
 			navigator.vibrate(3000);
 			alert('Game Over!  It\'s a tie.');
 		}
 	}
-
-	
-	
 }
 
 function clearGame() {
 	turn = 0;
 	array = [10,11,12,13,14,15,16,17,18];
 	counter = 0;
+	win = 0;
 	for(var i=1; i < 10; i++) {
 		var box = document.getElementById("box" + i);
 		box.src = "blank.png";
-	}	
+	}
+}	
 	
 function changePhoto(name) {
 	imageName = name;
@@ -104,14 +104,8 @@ function onPhotoDataSuccess(imageData) {
       //
       var smallImage = document.getElementById(imageName);
 
-      // Unhide image elements
-      //
-      //smallImage.style.display = 'block';
-
       // Show the captured photo
       // The inline CSS rules are used to resize the image
       //
       smallImage.src = "data:image/jpeg;base64," + imageData;
-}
-
 }
