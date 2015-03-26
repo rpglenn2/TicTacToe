@@ -18,6 +18,13 @@ function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
 
+function equals(num1, num2, num3) {
+	if((array[num1] == array[num2]) && (array[num2] == array[num3]) && (array[num1] == array[num3])){
+		return true;
+	}
+    return false;
+}
+
 function checkWin() {
 	win = 0;
 	/*for(var i=0; i < 9; i++) {
@@ -29,21 +36,21 @@ function checkWin() {
 			array[i] = 2;
 		}
 	}*/
-	if(array[0] == array[1] == array [2])
+	if(equals(0,1,2))
 		win = array[0];
-	if(array[3] == array[4] == array [5])
+	if(equals(3,4,5))
 		win = array[3];
-	if(array[6] == array[7] == array [8])
+	if(equals(6,7,8))
 		win = array[6];
-	if(array[0] == array[3] == array [6])
+	if(equals(0,3,6))
 		win = array[3];
-	if(array[1] == array[4] == array [7])
+	if(equals(1,4,7))
 		win = array[1];
-	if(array[2] == array[5] == array [8])
+	if(equals(2,5,8))
 		win = array[2];
-	if(array[0] == array[4] == array [8])
+	if(equals(0,4,8))
 		win = array[0];
-	if(array[6] == array[4] == array [2])
+	if(equals(6,4,2))
 		win = array[6];		
 	
 	if(win == 1 || win == 2) {
@@ -57,16 +64,17 @@ function toggleBox(name) {
 	var box = document.getElementById(name);
 	if(endsWith(box.src, "blank.png")) {
 		var substr = name.substring(3);
+		//alert('Player ' + substr + ' wins!');
 		if(turn == 0) {
 			box.src = "x.png";
 			turn = 1;
 			counter++;
-			array[substr.valueOf() - 1] = 1;
+			array[substr - 1] = 1;
 		} else { 
 			box.src = "o.png";
 			turn = 0;
 			counter++;
-			array[substr.valueOf() - 1] = 2;
+			array[substr - 1] = 2;
 		}
 		checkWin();
 		
